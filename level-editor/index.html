@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Level editor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>   
+    <script src="AssetHolder.js"></script>
+    <script src="editor.js"></script>
+    <div class="blocky">
+        <p>Columns</p>
+        <input type="number" id="columns" value="9"/>
+    </div>
+    <div class="blocky">
+            <p>Rows</p>
+            <input type="number" id="rows" value="16"/>
+    </div>
+    <div class="blocky">
+            <p>Tile size</p>
+            <input type="number" id="tileSize" value="80"/>
+        </div>
+    <div class="blocky">
+            <p>Ground tiles</p>
+            <input type="file" id="ground" multiple/>
+    </div>
+    <div class="blocky">
+            <p>Item tiles</p>
+            <input type="file" id="items" multiple>
+    </div>
+    <input type="button" class="blocky" id="change" value="Change">
+    <input type="button" class="blocky" id="resetLevel" value="Reset level"/>
+    <input type="button" class="blocky" id="saveLevel" value="Save level"/>
+    <div style="width: 80px;" class="blocky"></div>
+    <div class="canvas-block">
+        <input type="button" id="groundLeft">
+            <canvas id="groundCanvas" width="800" height="100"></canvas>
+        <input type="button" id="groundRight">
+    </div>
+    <div class="canvas-block">
+            <input type="button" id="itemLeft">
+            <canvas id="itemCanvas" width="800" height="100" ></canvas>
+            <input type="button" id="itemRight">
+        </div>
+        <div class="main-canvas-block">
+                <canvas id="levelCanvas" width="720" height="1280" ></canvas>
+    </div>
+    
+    
+    
+</body>
+
+</html>

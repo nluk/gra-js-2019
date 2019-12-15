@@ -1,0 +1,37 @@
+.blocky{
+    width: 100px;
+    height: 75px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.canvas-block{
+    width: 900px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main-canvas-block{
+    width: 900px;
+    max-height: 600px;
+    overflow: scroll;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+canvas{
+    border: 0.05px solid lightgray;
+}
+.canvas-block > input{
+    height: 60px;
+}
+
+.blocky > input{
+    width: 100px;
+}
+.blocky > p{
+    text-align: center;
+}
