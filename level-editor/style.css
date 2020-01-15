@@ -32,6 +32,14 @@ canvas{
 .blocky > input{
     width: 100px;
 }
+.blocky > select{
+    width: 100px;
+    height: 20px;
+}
 .blocky > p{
     text-align: center;
+}
+
+.new_block{
+    display: block;
 }
