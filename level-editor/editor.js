@@ -307,7 +307,7 @@ function addListeners() {
         }
         else if (e.keyCode === 67) { //C
             currentMode = COLLISION_BOXES
-        }
+        } 
         else if (e.keyCode === 82) { //R
             currentMode = ROTATION
         }
@@ -377,11 +377,16 @@ function saveLevel() {
         lvl[i] = new Array(rows)
         for (let j = 0; j < rows; j++) {
             let cell = level[i][j]
-            if (cell.entity == null || cell.enitity == undefined) {
+            
+            if (cell.entity == null || cell.entity == undefined) {
                 lvl[i][j] = { b: cell.background, t: cell.tile, i: cell.item, r: cell.tileRotation, e: null }
+                console.log("null");
+                
             }
             else {
                 lvl[i][j] = { b: cell.background, t: cell.tile, i: cell.item, r: cell.tileRotation, e: cell.entity }
+                console.log(cell.entity);
+                
             }
 
         }

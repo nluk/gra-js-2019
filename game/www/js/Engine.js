@@ -72,6 +72,18 @@ class Engine {
 
     }
 
+    renderTime(time){
+        this.offCtx.font = "50px PIXEL"
+        this.offCtx.fillText(""+time,5*TILE_SIZE,TILE_SIZE)
+    }
+
+    renderInfo(message){
+        this.offCtx.font = "50px PIXEL"
+        
+        
+        this.offCtx.fillText(message,TILE_SIZE,8*TILE_SIZE)
+    }
+
     setBoundingBoxOn(boundingBoxOn) {
         this.boundingBoxOn = boundingBoxOn
     }

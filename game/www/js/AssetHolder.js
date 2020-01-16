@@ -13,11 +13,22 @@ class AssetHolder {
     }
 
 
-    registerSound(assetCode, src) {
+    registerSound(assetCode, src, volume) {
         let sound = new Howl({
-            src: [src]
+            src: [src],
+            volume : volume
         });
         this.sounds.set(assetCode, sound);
+    }
+
+    registerMainTheme(src, volume){
+        let theme = new Howl({
+            src: [src],
+            volume: volume,
+            autoplay: true,
+            loop: true
+        })
+        this.sounds.set(MAIN_THEME,theme)
     }
 
 
@@ -71,13 +82,13 @@ class AssetHolder {
         var promise = new Promise(function (resolve, reject) {
             var img = new Image(width, height);
             img.onload = function () {
-                console.log("Image loaded:");
-                console.log(img);
-                console.log("Adding to images");
-                console.log(self.images);
+                //console.log("Image loaded:");
+                //console.log(img);
+                //console.log("Adding to images");
+                //console.log(self.images);
                 self.images.set(assetCode, img);
-                console.log("Added");
-                console.log(self.images);
+                //console.log("Added");
+                //console.log(self.images);
 
                 resolve();
             };
@@ -95,7 +106,11 @@ class AssetHolder {
      * @memberof AssetHolder
      */
     getImage(assetCode) {
-        return this.images.get(assetCode)
+        //console.log("Requested asset: "+assetCode);
+        let asset = this.images.get(assetCode)
+        //console.log("Asset: ");
+        //console.log(asset);
+        return asset
     }
 
 }

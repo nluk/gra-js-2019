@@ -42,6 +42,7 @@ class GameObject extends Collidable {
             this.isDisplayed = true;
         }
     }
+    
 
     updateTile() {
 
@@ -77,13 +78,20 @@ class GameObject extends Collidable {
     }
 
     resetToInitialPosition(){
-        console.log("Reset position called");
+        //console.log("Reset position called");
         
         this.x = this.startX
         this.y = this.startY
         this.shouldRestart = false
     }
 
+    setDirection(direction){
+        this.direction = direction;
+    }
+
+    getXIncrement(){
+        
+    }
     
 
 
