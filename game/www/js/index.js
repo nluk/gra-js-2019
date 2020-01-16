@@ -34,15 +34,7 @@ var app = {
     onDeviceReady: async function () {
         await sleep(2000)
         console.log("Device ready called");
-        var firebaseConfig = {
-            apiKey: "AIzaSyAUt4aTdc0mzehHTJGMl5GNnWdATkTZz7c",
-            authDomain: "froggercordova.firebaseapp.com",
-            databaseURL: "https://froggercordova.firebaseio.com",
-            projectId: "froggercordova",
-            storageBucket: "froggercordova.appspot.com",
-            messagingSenderId: "371798567601",
-            appId: "1:371798567601:web:47d942fa2db5d312ba9090"
-          };
+        var firebaseConfig = null
         firebase.initializeApp(firebaseConfig);
         database = firebase.database();
         let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
